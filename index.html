@@ -3,7 +3,74 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>M. Hussnain Saeed | iOS Developer</title>
+        <meta name="description" content="Muhammad Hussnain Saeed is an iOS Developer in Rawalpindi, Pakistan, specializing in Swift, SwiftUI, ARKit, computer vision, and native iOS apps.">
+        <meta name="author" content="Muhammad Hussnain Saeed">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="theme-color" content="#050505">
+        <meta name="application-name" content="Muhammad Hussnain Saeed | iOS Developer">
+        <title>Muhammad Hussnain Saeed | iOS Developer | Swift & SwiftUI</title>
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Muhammad Hussnain Saeed | iOS Developer">
+        <meta property="og:description" content="Portfolio of Muhammad Hussnain Saeed, an iOS Developer specializing in Swift, SwiftUI, ARKit, computer vision, and native iOS development.">
+        <meta property="og:site_name" content="Muhammad Hussnain Saeed">
+        <meta property="og:locale" content="en_US">
+
+        <!-- X / Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Muhammad Hussnain Saeed | iOS Developer">
+        <meta name="twitter:description" content="iOS Developer specializing in Swift, SwiftUI, ARKit, computer vision, and native iOS development.">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "#person",
+              "name": "Muhammad Hussnain Saeed",
+              "jobTitle": "iOS Developer",
+              "description": "iOS Developer specializing in Swift, SwiftUI, ARKit, native iOS development, computer vision, backend systems, and API integration.",
+              "email": "mailto:m.hussnainsaeed@gmail.com",
+              "telephone": "+92 331 5981360",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Rawalpindi",
+                "addressCountry": "PK"
+              },
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Barani Institute of Information Technology"
+              },
+              "knowsAbout": [
+                "iOS Development",
+                "Swift",
+                "SwiftUI",
+                "ARKit",
+                "Native iOS Development",
+                "Computer Vision",
+                "Python",
+                "PostgreSQL",
+                "API Integration",
+                "Git",
+                "GitHub",
+                "UI/UX Design"
+              ],
+              "sameAs": [
+                "https://linkedin.com/in/m-hussnain",
+                "https://github.com/muhammadhussnainsaeed"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "#website",
+              "name": "Muhammad Hussnain Saeed | iOS Developer",
+              "description": "Professional portfolio of Muhammad Hussnain Saeed, an iOS Developer specializing in Swift and SwiftUI.",
+              "inLanguage": "en"
+            }
+          ]
+        }
+        </script>
         <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
         <link rel="shortcut icon" href="/assets/favicon.ico" />
@@ -207,7 +274,7 @@
             border: 1px solid var(--border);
             border-radius: 1rem;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-            transition: *background* 0.3s ease, border-color 0.3s ease;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
         body.light-theme .dock {
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
@@ -222,7 +289,7 @@
         .dock-btn {
             padding: 0.75rem;
             border-radius: 0.75rem;
-            transition: *background* 0.2s ease, color 0.2s ease;
+            transition: background 0.2s ease, color 0.2s ease;
             color: var(--text-main);
             display: flex;
         }
@@ -241,7 +308,7 @@
             letter-spacing: 0.03em;
             text-transform: uppercase;
             border-radius: 0.75rem;
-            transition: *background* 0.2s ease;
+            transition: background 0.2s ease;
         }
         .dock-contact:hover {
             background: var(--accent-dark);
@@ -261,7 +328,6 @@
             font-size: 1.5rem;
             pointer-events: none;
             z-index: 9999;
-            /* Changed from 1.5s to 4s for readability */
             animation: floatUp 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }
         @keyframes floatUp {
@@ -291,7 +357,7 @@
             inset: 0;
             opacity: 0.6;
             background: radial-gradient(circle at center, var(--card-bg) 0%, var(--bg) 70%);
-            transition: *background* 0.3s ease;
+            transition: background 0.3s ease;
         }
         .hero-text {
             position: relative;
@@ -428,7 +494,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: *background* 0.5s ease;
+            transition: background 0.5s ease;
         }
         .bcard-1:hover {
             background: var(--card-hover);
@@ -740,6 +806,146 @@
             color: var(--text-main);
         }
 
+        @media (max-width: 767px) {
+            .dock {
+                display: flex;
+                bottom: max(0.75rem, env(safe-area-inset-bottom));
+                width: calc(100% - 1.5rem);
+                max-width: 24rem;
+                justify-content: space-between;
+                gap: 0.25rem;
+                padding: 0.35rem;
+                border-radius: 0.875rem;
+            }
+
+            .dock-cluster {
+                gap: 0.1rem;
+                padding-right: 0.35rem;
+            }
+
+            .dock-btn {
+                padding: 0.6rem;
+                border-radius: 0.65rem;
+            }
+
+            .dock-btn .icon {
+                font-size: 1.1rem;
+            }
+
+            .dock-contact {
+                padding: 0.65rem 0.9rem;
+                font-size: 0.75rem;
+                border-radius: 0.65rem;
+            }
+
+            .dock-cluster .dock-btn[title="Available for work"] {
+                padding-left: 0.6rem;
+                padding-right: 0.6rem;
+            }
+
+            .hero-left {
+                bottom: 5.5rem;
+                left: 1.25rem;
+                right: 1.25rem;
+                justify-content: flex-start;
+            }
+
+            .hero-right {
+                bottom: 2rem;
+                left: 1.25rem;
+                right: 1.25rem;
+                text-align: left;
+            }
+
+            .hero-email {
+                font-size: 0.8rem;
+                overflow-wrap: anywhere;
+            }
+
+            .footer-email {
+                max-width: 100%;
+                font-size: 1.15rem;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+
+            .floating-text {
+                position: fixed;
+                left: 50% !important;
+                right: auto !important;
+                top: auto !important;
+                bottom: 5.5rem !important;
+                transform: translateX(-50%) !important;
+                width: calc(100vw - 2rem);
+                max-width: 22rem;
+                padding: 0 0.75rem;
+                text-align: center;
+                font-size: 1.05rem;
+                line-height: 1.35;
+                overflow-wrap: anywhere;
+                word-break: normal;
+                animation-duration: 8s;
+            }
+
+            .topnav {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                z-index: 1000 !important;
+                width: 100% !important;
+                padding: 1rem !important;
+                gap: 0.5rem;
+                pointer-events: auto !important;
+            }
+
+            .nav-left,
+            .nav-right {
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-left {
+                gap: 0.65rem;
+                min-width: 0;
+            }
+
+            .nav-right {
+                gap: 0;
+                flex-shrink: 0;
+            }
+
+            .topnav .logo,
+            .topnav .nav-right,
+            .topnav .nav-cta {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .nav-links {
+                display: flex !important;
+                align-items: center;
+                gap: 0.55rem;
+                white-space: nowrap;
+                color: var(--text-muted);
+                font-size: 0.62rem;
+            }
+
+            .nav-links a {
+                display: block !important;
+            }
+
+            .nav-cta {
+                display: block !important;
+                padding: 0.45rem 0.65rem;
+                font-size: 0.65rem;
+                white-space: nowrap;
+            }
+        }
+
         /* ============ Responsive ============ */
         @media (min-width: 768px) {
             .nav-journal { display: block; }
@@ -769,15 +975,23 @@
         </style>
     </head>
     <body>
+        <noscript>
+            <div class="section" style="padding-top:2rem;">
+                <h2>Muhammad Hussnain Saeed — iOS Developer</h2>
+                <p>iOS Developer specializing in Swift, SwiftUI, ARKit, native iOS development, computer vision, and backend systems.</p>
+                <p>Rawalpindi, Pakistan · <a href="mailto:m.hussnainsaeed@gmail.com">m.hussnainsaeed@gmail.com</a> · <a href="https://linkedin.com/in/m-hussnain">LinkedIn</a> · <a href="https://github.com/muhammadhussnainsaeed">GitHub</a></p>
+            </div>
+        </noscript>
+
         <div class="wrap" id="top">
             <!-- Top Navigation -->
-            <nav class="topnav">
+            <nav class="topnav" aria-label="Primary navigation">
                 <div class="nav-left">
                     <a href="#top" id="nav-logo" class="logo">
-    					<div class="logo-mark">
-        					<img src="assets/apple-touch-icon.png" alt="M. Hussnain Saeed">
-    					</div>
-					</a>
+                        <div class="logo-mark">
+                            <img src="assets/apple-touch-icon.png" alt="Muhammad Hussnain Saeed">
+                        </div>
+                    </a>
                     <div class="nav-links">
                         <a href="#top" id="nav-home-link">Home</a>
                         <a href="#about" id="nav-about-link">About</a>
@@ -796,14 +1010,13 @@
                 <div class="dock-cluster">
                     <!-- 1. Toggle Theme -->
                     <button id="toggle-theme-btn" class="dock-btn" title="Toggle Theme" aria-label="Toggle Theme">
-                        <svg class="icon" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg>
                     </button>
 
-                    <!-- 2. Download CV (Note: requires a file named resume.pdf inside an 'assets' folder) -->
-                    <a href="assets/resume.pdf" download class="dock-btn" title="Download CV" aria-label="Download CV">
-                        <svg class="icon" viewBox="0 0 24 24">
+                    <a href="assets/Muhammad_Hussnain_Saeed_Resume.pdf" download class="dock-btn" title="Download Resume" aria-label="Download Resume">
+                        <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                             <polyline points="7 10 12 15 17 10" />
                             <line x1="12" y1="15" x2="12" y2="3" />
@@ -820,7 +1033,7 @@
 
                     <!-- 4. Easter Egg -->
                     <button id="easter-egg-btn" class="dock-btn" title="???" aria-label="Surprise">
-                        <svg class="icon" viewBox="0 0 24 24" stroke-width="2">
+                        <svg aria-hidden="true" class="icon" viewBox="0 0 24 24" stroke-width="2">
                             <rect x="2" y="6" width="20" height="12" rx="4" ry="4" />
                             <path d="M6 12h4M8 10v4M15 13h.01M18 11h.01" />
                         </svg>
@@ -828,7 +1041,7 @@
 
                     <!-- 5. Project Category Filter -->
                     <button id="filter-projects-btn" class="dock-btn" title="Filter Projects: All" aria-label="Filter Projects">
-                        <svg class="icon" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
                             <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
                         </svg>
                     </button>
@@ -836,13 +1049,14 @@
                 <a href="#contact" id="floating-contact-btn" class="dock-contact">Contact</a>
             </div>
 
+            <main id="main-content">
             <!-- Hero -->
             <header class="hero">
                 <div class="hero-bg"></div>
-                <h1 class="hero-text">/iOS</h1>
+                <h1 class="hero-text" aria-label="iOS Developer portfolio">/iOS</h1>
 
                 <div class="hero-left">
-                    <p>M. Hussnain Saeed<br>iOS Developer &mdash; Rawalpindi, PK</p>
+                    <p>Muhammad Hussnain Saeed<br>iOS Developer &mdash; Rawalpindi, PK</p>
                 </div>
 
                 <div class="hero-right">
@@ -851,12 +1065,12 @@
             </header>
 
             <!-- Benefits / About -->
-            <section id="about" class="section">
+            <section id="about" class="section" aria-labelledby="about-heading">
                 <div class="eyebrow">
                     <div class="dot"></div>
                     <span>BSCS Graduate &middot; Native iOS Focus</span>
                 </div>
-                <h2 class="benefits-head">
+                <h2 id="about-heading" class="benefits-head">
                     I build native iOS interfaces with Swift and SwiftUI,
                     <span class="muted">backed by strong CS fundamentals</span>
                     in data structures, computer vision, and backend systems.
@@ -891,91 +1105,91 @@
             </section>
 
             <!-- Skills -->
-			<section id="skills" class="section" style="padding-top:0;">
-				<div class="work-head">
-					<h2>Toolkit</h2>
-				</div>
-				<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2rem;">
-					<div>
-						<p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Languages</p>
-						<p style="color:#ebebeb;line-height:1.9;">Swift / SwiftUI, Python, Java, C++, C#, JavaScript, HTML, CSS</p>
-					</div>
-					<div>
-						<p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Databases</p>
-						<p style="color:#ebebeb;line-height:1.9;">SQL, MS SQL Server, MySQL, PostgreSQL</p>
-					</div>
-					<div>
-						<p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Tools & Platforms</p>
-						<p style="color:#ebebeb;line-height:1.9;">Git, GitHub, Xcode, Figma, VS Code, Visual Studio, IntelliJ IDEA, Postman</p>
-					</div>
-					<div>
-						<p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Design</p>
-						<p style="color:#ebebeb;line-height:1.9;">Adobe Photoshop, Adobe Illustrator, UI/UX Design, Brand Identity</p>
-					</div>
-					<div>
-						<p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">CS Fundamentals</p>
-						<p style="color:#ebebeb;line-height:1.9;">OOP, Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks, AI</p>
-					</div>
-					<div>
-						<p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Methodologies</p>
-						<p style="color:#ebebeb;line-height:1.9;">API Integration, Project Coordination, R&D, Problem Solving</p>
-					</div>
-				</div>
-			</section>
+            <section id="skills" class="section" style="padding-top:0;">
+                <div class="work-head">
+                    <h2>Toolkit</h2>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2rem;">
+                    <div>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Languages</p>
+                        <p style="color:#ebebeb;line-height:1.9;">Swift / SwiftUI, Python, Java, C++, C#, JavaScript, HTML, CSS</p>
+                    </div>
+                    <div>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Databases</p>
+                        <p style="color:#ebebeb;line-height:1.9;">SQL, MS SQL Server, MySQL, PostgreSQL</p>
+                    </div>
+                    <div>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Tools & Platforms</p>
+                        <p style="color:#ebebeb;line-height:1.9;">Git, GitHub, Xcode, Figma, VS Code, Visual Studio, IntelliJ IDEA, Postman</p>
+                    </div>
+                    <div>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Design</p>
+                        <p style="color:#ebebeb;line-height:1.9;">Adobe Photoshop, Adobe Illustrator, UI/UX Design, Brand Identity</p>
+                    </div>
+                    <div>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">CS Fundamentals</p>
+                        <p style="color:#ebebeb;line-height:1.9;">OOP, Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks, AI</p>
+                    </div>
+                    <div>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Methodologies</p>
+                        <p style="color:#ebebeb;line-height:1.9;">API Integration, Project Coordination, R&D, Problem Solving</p>
+                    </div>
+                </div>
+            </section>
 
-			<!-- Experience -->
-			<section id="experience" class="section" style="padding-top:0;">
-				<div class="work-head">
-					<h2>Experience</h2>
-				</div>
-				<div style="display:flex; flex-direction:column; gap:2.5rem;">
-					<div style="border-bottom:1px solid #1a1a1a; padding-bottom:2rem;">
-						<p style="font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;">Jun 2023 &ndash; Apr 2024</p>
-						<h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Marketing Manager</h3>
-						<p style="color:#888;font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
-						<p style="color:#aaa;line-height:1.8;margin:0;">Led promotional campaigns to increase visibility and student engagement. Enhanced outreach through targeted digital platforms and event organisation to expand campus presence.</p>
-					</div>
-					<div>
-						<p style="font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;">May 2024 &ndash; Jun 2024</p>
-						<h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Marketing Manager &mdash; Mentorship</h3>
-						<p style="color:#888;font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
-						<p style="color:#aaa;line-height:1.8;margin:0;">Provided strategic insights and mentorship to support growth and foster a collaborative, innovative environment within the student society.</p>
-					</div>
-				</div>
-			</section>
+            <!-- Experience -->
+            <section id="experience" class="section" style="padding-top:0;">
+                <div class="work-head">
+                    <h2>Experience</h2>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:2.5rem;">
+                    <div style="border-bottom:1px solid #1a1a1a; padding-bottom:2rem;">
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;">Jun 2023 &ndash; Apr 2024</p>
+                        <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Marketing Manager</h3>
+                        <p style="color:#888;font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
+                        <p style="color:#aaa;line-height:1.8;margin:0;">Led promotional campaigns to increase visibility and student engagement. Enhanced outreach through targeted digital platforms and event organisation to expand campus presence.</p>
+                    </div>
+                    <div>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;">May 2024 &ndash; Jun 2024</p>
+                        <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Marketing Manager &mdash; Mentorship</h3>
+                        <p style="color:#888;font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
+                        <p style="color:#aaa;line-height:1.8;margin:0;">Provided strategic insights and mentorship to support growth and foster a collaborative, innovative environment within the student society.</p>
+                    </div>
+                </div>
+            </section>
 
-			<!-- Education -->
-			<section id="education" class="section" style="padding-top:0;">
-				<div class="work-head">
-					<h2>Education &amp; Certifications</h2>
-				</div>
-				<div style="border-bottom:1px solid #1a1a1a; padding-bottom:2.5rem; margin-bottom:2.5rem;">
-					<h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Barani Institute of Information Technology</h3>
-					<p style="color:#888;font-size:.85rem;margin:0 0 .25rem;">Bachelor of Science in Computer Science</p>
-					<p style="color:#666;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin:0 0 1rem;">Oct 2022 &ndash; May 2026 &middot; Graduated</p>
-					<p style="color:#aaa;line-height:1.8;margin:0;max-width:48rem;">Built a strong foundation in core CS fundamentals &mdash; including OOP, data structures, algorithms, OS, computer networks, cybersecurity, and compiler design. Applied through collaborative academic and personal projects, specializing in native iOS interfaces with Swift and SwiftUI, computer vision systems, and backend development using Python and PostgreSQL.</p>
-				</div>
-				<div style="display:grid; gap:1rem;">
-					<div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid #1a1a1a;">
-						<div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Intro to iOS Mobile Application Development</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
-						<div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Feb 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/HLASO8DGEJZ7" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
-					</div>
-					<div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid #1a1a1a;">
-						<div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Programming Fundamentals in Swift</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
-						<div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Aug 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/DFV50QBVDLQX" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
-					</div>
-					<div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0;">
-						<div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Version Control</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
-						<div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Apr 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/B2MNR47Y4RFB" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
-					</div>
+            <!-- Education -->
+            <section id="education" class="section" style="padding-top:0;">
+                <div class="work-head">
+                    <h2>Education &amp; Certifications</h2>
+                </div>
+                <div style="border-bottom:1px solid #1a1a1a; padding-bottom:2.5rem; margin-bottom:2.5rem;">
+                    <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Barani Institute of Information Technology</h3>
+                    <p style="color:#888;font-size:.85rem;margin:0 0 .25rem;">Bachelor of Science in Computer Science</p>
+                    <p style="color:#666;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin:0 0 1rem;">Oct 2022 &ndash; May 2026 &middot; Graduated</p>
+                    <p style="color:#aaa;line-height:1.8;margin:0;max-width:48rem;">Built a strong foundation in core CS fundamentals &mdash; including OOP, data structures, algorithms, OS, computer networks, cybersecurity, and compiler design. Applied through collaborative academic and personal projects, specializing in native iOS interfaces with Swift and SwiftUI, computer vision systems, and backend development using Python and PostgreSQL.</p>
+                </div>
+                <div style="display:grid; gap:1rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid #1a1a1a;">
+                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Intro to iOS Mobile Application Development</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
+                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Feb 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/HLASO8DGEJZ7" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid #1a1a1a;">
+                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Programming Fundamentals in Swift</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
+                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Aug 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/DFV50QBVDLQX" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
+                    </div>
                     <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0;">
-						<div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Software Engineering & Operations</p><p style="color:#666;font-size:.8rem;margin:0;">Xgrid &middot; Bootcamp 2026</p></div>
-						<div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Jul 2026</p></div>
-					</div>
-				</div>
-			</section>
+                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Version Control</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
+                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Apr 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/B2MNR47Y4RFB" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0;">
+                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Software Engineering & Operations</p><p style="color:#666;font-size:.8rem;margin:0;">Xgrid &middot; Bootcamp 2026</p></div>
+                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Jul 2026</p></div>
+                    </div>
+                </div>
+            </section>
 
-			<!-- Selected Work -->
+            <!-- Selected Work -->
             <section id="work" class="section">
                 <div class="work-head">
                     <h2>Selected Work</h2>
@@ -989,63 +1203,63 @@
                         </div>
                         <div class="project-meta">
                             <div>
-                                <h3>KENOS</h3>
+                                <h3>KENOS — SwiftUI, ARKit &amp; 3D Scanning</h3>
                                 <p class="cat">SwiftUI / ARKit / 3D Scanning</p>
                             </div>
                             <div class="arrow-btn">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+                                <svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
                             </div>
                         </div>
                     </a>
 
                     <a href="https://github.com/muhammadhussnainsaeed/Optix-Person_Tracker_for_Homes-iOS" target="_blank" rel="noopener" class="project" data-status="Completed">
                         <div class="project-frame">
-                            <img src="assets/projects/optix.jpg" alt="Optix project">
+                            <img src="assets/projects/optix.jpg" alt="OPTIX person tracker for homes iOS project built with SwiftUI, Python, and computer vision" loading="lazy" decoding="async">
                         </div>
                         <div class="project-meta">
                             <div>
-                                <h3>OPTIX</h3>
+                                <h3>OPTIX — Person Tracker for Homes</h3>
                                 <p class="cat">SwiftUI / Python / Computer Vision &mdash; Final Year Project</p>
                             </div>
                             <div class="arrow-btn">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+                                <svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
                             </div>
                         </div>
                     </a>
 
                     <a href="https://github.com/muhammadhussnainsaeed/AuraPlus-iOS" target="_blank" rel="noopener" class="project" data-status="Completed">
                         <div class="project-frame">
-                            <img src="assets/projects/aura.jpg" alt="Aura project">
+                            <img src="assets/projects/aura.jpg" alt="AURA+ SwiftUI cross-platform WebSocket project" loading="lazy" decoding="async">
                         </div>
                         <div class="project-meta">
                             <div>
-                                <h3>AURA+</h3>
+                                <h3>AURA+ — SwiftUI Cross-Platform App</h3>
                                 <p class="cat">SwiftUI / Cross-platform / WebSocket</p>
                             </div>
                             <div class="arrow-btn">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+                                <svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
                             </div>
                         </div>
                     </a>
 
                     <a href="https://github.com/muhammadhussnainsaeed/Hisab-Kitab-App" target="_blank" rel="noopener" class="project" data-status="Completed">
                         <div class="project-frame">
-                            <img src="assets/projects/hisabkitab.jpg" alt="Hisab Kitab project">
+                            <img src="assets/projects/hisabkitab.jpg" alt="Hisab Kitab C# Windows Forms loan management project" loading="lazy" decoding="async">
                         </div>
                         <div class="project-meta">
                             <div>
-                                <h3>HISAB KITAB</h3>
+                                <h3>Hisab Kitab — Loan Management App</h3>
                                 <p class="cat">C# / Windows Forms &mdash; Loan Management</p>
                             </div>
                             <div class="arrow-btn">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+                                <svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
                             </div>
                         </div>
                     </a>
 
                     <div class="project" style="cursor:default;" data-status="Deployed">
                         <div class="project-frame">
-                            <img src="assets/projects/biit-eval.jpg" alt="Faculty Evaluation System project">
+                            <img src="assets/projects/biit-eval.jpg" alt="Faculty Evaluation System ASP.NET and MS SQL Server project at BIIT" loading="lazy" decoding="async">
                         </div>
                         <div class="project-meta">
                             <div>
@@ -1057,6 +1271,8 @@
                 </div>
             </section>
 
+            </main>
+
             <!-- Footer -->
             <footer id="contact" class="footer">
                 <div class="footer-inner">
@@ -1064,16 +1280,16 @@
                         <h2 class="lets-talk">LET'S<br>TALK.</h2>
                         <a href="mailto:m.hussnainsaeed@gmail.com" class="footer-email">m.hussnainsaeed@gmail.com</a>
                         <p class="loc">
-                            <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                            Open to project, internship &amp; junior iOS roles &middot; Rawalpindi, Pakistan
+                            <svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                            Open to projects, internships &amp; junior iOS roles &middot; Rawalpindi, Pakistan
                         </p>
                     </div>
                     <div class="socials">
                         <a href="https://linkedin.com/in/m-hussnain" target="_blank" rel="noopener" class="social" aria-label="LinkedIn">
-                            <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            <svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                         </a>
                         <a href="https://github.com/muhammadhussnainsaeed" target="_blank" rel="noopener" class="social" aria-label="GitHub">
-                            <svg class="icon" viewBox="0 0 24 24" stroke="none" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                            <svg aria-hidden="true" class="icon" viewBox="0 0 24 24" stroke="none" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -1084,7 +1300,7 @@
             </footer>
         </div>
 
-        <!-- ============ Scripts for Logic Integration ============ -->
+        <!-- Interactive portfolio controls -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 // 1. Theme Toggle Logic
@@ -1094,8 +1310,8 @@
                     // Optional: Swap icon based on theme
                     const isLight = document.body.classList.contains('light-theme');
                     themeBtn.innerHTML = isLight 
-                        ? `<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/></svg>` 
-                        : `<svg class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>`;
+                        ? `<svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/></svg>` 
+                        : `<svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>`;
                 });
 
                 // 2. Easter Egg Logic
@@ -1117,7 +1333,7 @@
                     // Changed from 1500 to 4000 to match the new 4s animation
                     setTimeout(() => {
                         text.remove();
-                    }, 5000);
+                    }, window.innerWidth <= 767 ? 8000 : 5000);
                 });
 
                 // 3. Project Filter Logic
