@@ -355,9 +355,13 @@
             content: "";
             position: absolute;
             inset: 0;
-            opacity: 0.6;
+            opacity: 0;
             background: radial-gradient(circle at center, var(--card-bg) 0%, var(--bg) 70%);
             transition: background 0.3s ease;
+            animation: heroGlowIn 1.2s ease 0.1s forwards;
+        }
+        @keyframes heroGlowIn {
+            to { opacity: 0.6; }
         }
         .hero-text {
             position: relative;
@@ -369,6 +373,12 @@
             color: var(--text-main);
             text-align: center;
             margin: 0;
+            opacity: 0;
+            filter: blur(10px);
+            animation: heroFocusIn 1s ease 0.05s forwards;
+        }
+        @keyframes heroFocusIn {
+            to { opacity: 1; filter: blur(0); }
         }
         .hero-left {
             position: absolute;
@@ -377,6 +387,13 @@
             display: flex;
             align-items: center;
             gap: 1.25rem;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .hero-left.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         .avatars {
             display: flex;
@@ -419,6 +436,39 @@
             bottom: 3rem;
             right: 2rem;
             text-align: right;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .hero-right.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 0.9em;
+            background: var(--accent);
+            margin-left: 2px;
+            vertical-align: -0.1em;
+            animation: cursorBlink 0.9s step-end infinite;
+        }
+        @keyframes cursorBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-bg::after,
+            .hero-text,
+            .hero-left,
+            .hero-right {
+                animation: none !important;
+                transition: none !important;
+                opacity: 1 !important;
+                filter: none !important;
+                transform: none !important;
+            }
+            .typewriter-cursor { display: none; }
         }
         .hero-email {
             color: var(--text-main);
@@ -1056,7 +1106,7 @@
                 <h1 class="hero-text" aria-label="iOS Developer portfolio">/iOS</h1>
 
                 <div class="hero-left">
-                    <p>Muhammad Hussnain Saeed<br>iOS Developer &mdash; Rawalpindi, PK</p>
+                    <p><span id="hero-typewriter"></span></p>
                 </div>
 
                 <div class="hero-right">
@@ -1111,28 +1161,28 @@
                 </div>
                 <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2rem;">
                     <div>
-                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Languages</p>
-                        <p style="color:#ebebeb;line-height:1.9;">Swift / SwiftUI, Python, Java, C++, C#, JavaScript, HTML, CSS</p>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Languages</p>
+                        <p style="color:var(--text-main);line-height:1.9;">Swift / SwiftUI, Python, Java, C++, C#, JavaScript, HTML, CSS</p>
                     </div>
                     <div>
-                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Databases</p>
-                        <p style="color:#ebebeb;line-height:1.9;">SQL, MS SQL Server, MySQL, PostgreSQL</p>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Databases</p>
+                        <p style="color:var(--text-main);line-height:1.9;">SQL, MS SQL Server, MySQL, PostgreSQL</p>
                     </div>
                     <div>
-                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Tools & Platforms</p>
-                        <p style="color:#ebebeb;line-height:1.9;">Git, GitHub, Xcode, Figma, VS Code, Visual Studio, IntelliJ IDEA, Postman</p>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Tools & Platforms</p>
+                        <p style="color:var(--text-main);line-height:1.9;">Git, GitHub, Xcode, Figma, VS Code, Visual Studio, IntelliJ IDEA, Postman</p>
                     </div>
                     <div>
-                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Design</p>
-                        <p style="color:#ebebeb;line-height:1.9;">Adobe Photoshop, Adobe Illustrator, UI/UX Design, Brand Identity</p>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Design</p>
+                        <p style="color:var(--text-main);line-height:1.9;">Adobe Photoshop, Adobe Illustrator, UI/UX Design, Brand Identity</p>
                     </div>
                     <div>
-                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">CS Fundamentals</p>
-                        <p style="color:#ebebeb;line-height:1.9;">OOP, Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks, AI</p>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">CS Fundamentals</p>
+                        <p style="color:var(--text-main);line-height:1.9;">OOP, Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks, AI</p>
                     </div>
                     <div>
-                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem;">Methodologies</p>
-                        <p style="color:#ebebeb;line-height:1.9;">API Integration, Project Coordination, R&D, Problem Solving</p>
+                        <p style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Methodologies</p>
+                        <p style="color:var(--text-main);line-height:1.9;">API Integration, Project Coordination, R&D, Problem Solving</p>
                     </div>
                 </div>
             </section>
@@ -1145,15 +1195,15 @@
                 <div style="display:flex; flex-direction:column; gap:2.5rem;">
                     <div style="border-bottom:1px solid #1a1a1a; padding-bottom:2rem;">
                         <p style="font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;">Jun 2023 &ndash; Apr 2024</p>
-                        <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Marketing Manager</h3>
-                        <p style="color:#888;font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
-                        <p style="color:#aaa;line-height:1.8;margin:0;">Led promotional campaigns to increase visibility and student engagement. Enhanced outreach through targeted digital platforms and event organisation to expand campus presence.</p>
+                        <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:var(--text-main);">Marketing Manager</h3>
+                        <p style="color:var(--text-muted);font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
+                        <p style="color:var(--text-main);opacity:.75;line-height:1.8;margin:0;">Led promotional campaigns to increase visibility and student engagement. Enhanced outreach through targeted digital platforms and event organisation to expand campus presence.</p>
                     </div>
                     <div>
                         <p style="font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;">May 2024 &ndash; Jun 2024</p>
-                        <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Marketing Manager &mdash; Mentorship</h3>
-                        <p style="color:#888;font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
-                        <p style="color:#aaa;line-height:1.8;margin:0;">Provided strategic insights and mentorship to support growth and foster a collaborative, innovative environment within the student society.</p>
+                        <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:var(--text-main);">Marketing Manager &mdash; Mentorship</h3>
+                        <p style="color:var(--text-muted);font-size:.85rem;margin:0 0 .75rem;">BIIT Programming Society</p>
+                        <p style="color:var(--text-main);opacity:.75;line-height:1.8;margin:0;">Provided strategic insights and mentorship to support growth and foster a collaborative, innovative environment within the student society.</p>
                     </div>
                 </div>
             </section>
@@ -1164,27 +1214,27 @@
                     <h2>Education &amp; Certifications</h2>
                 </div>
                 <div style="border-bottom:1px solid #1a1a1a; padding-bottom:2.5rem; margin-bottom:2.5rem;">
-                    <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:#fff;">Barani Institute of Information Technology</h3>
-                    <p style="color:#888;font-size:.85rem;margin:0 0 .25rem;">Bachelor of Science in Computer Science</p>
-                    <p style="color:#666;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin:0 0 1rem;">Oct 2022 &ndash; May 2026 &middot; Graduated</p>
-                    <p style="color:#aaa;line-height:1.8;margin:0;max-width:48rem;">Built a strong foundation in core CS fundamentals &mdash; including OOP, data structures, algorithms, OS, computer networks, cybersecurity, and compiler design. Applied through collaborative academic and personal projects, specializing in native iOS interfaces with Swift and SwiftUI, computer vision systems, and backend development using Python and PostgreSQL.</p>
+                    <h3 style="font-size:1.4rem;font-weight:700;margin:0 0 .25rem;color:var(--text-main);">Barani Institute of Information Technology</h3>
+                    <p style="color:var(--text-muted);font-size:.85rem;margin:0 0 .25rem;">Bachelor of Science in Computer Science</p>
+                    <p style="color:var(--text-muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin:0 0 1rem;">Oct 2022 &ndash; May 2026 &middot; Graduated</p>
+                    <p style="color:var(--text-main);opacity:.75;line-height:1.8;margin:0;max-width:48rem;">Built a strong foundation in core CS fundamentals &mdash; including OOP, data structures, algorithms, OS, computer networks, cybersecurity, and compiler design. Applied through collaborative academic and personal projects, specializing in native iOS interfaces with Swift and SwiftUI, computer vision systems, and backend development using Python and PostgreSQL.</p>
                 </div>
                 <div style="display:grid; gap:1rem;">
                     <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid #1a1a1a;">
-                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Intro to iOS Mobile Application Development</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
-                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Feb 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/HLASO8DGEJZ7" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
+                        <div><p style="color:var(--text-main);font-weight:600;margin:0 0 .2rem;">Intro to iOS Mobile Application Development</p><p style="color:var(--text-muted);font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
+                        <div style="text-align:right;"><p style="color:var(--text-muted);font-size:.8rem;margin:0 0 .2rem;">Feb 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/HLASO8DGEJZ7" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
                     </div>
                     <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0; border-bottom:1px solid #1a1a1a;">
-                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Programming Fundamentals in Swift</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
-                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Aug 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/DFV50QBVDLQX" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
+                        <div><p style="color:var(--text-main);font-weight:600;margin:0 0 .2rem;">Programming Fundamentals in Swift</p><p style="color:var(--text-muted);font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
+                        <div style="text-align:right;"><p style="color:var(--text-muted);font-size:.8rem;margin:0 0 .2rem;">Aug 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/DFV50QBVDLQX" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
                     </div>
                     <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0;">
-                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Version Control</p><p style="color:#666;font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
-                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Apr 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/B2MNR47Y4RFB" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
+                        <div><p style="color:var(--text-main);font-weight:600;margin:0 0 .2rem;">Version Control</p><p style="color:var(--text-muted);font-size:.8rem;margin:0;">Meta &middot; Coursera</p></div>
+                        <div style="text-align:right;"><p style="color:var(--text-muted);font-size:.8rem;margin:0 0 .2rem;">Apr 2025</p><a href="https://www.coursera.org/account/accomplishments/verify/B2MNR47Y4RFB" target="_blank" rel="noopener" style="color:var(--accent);font-size:.8rem;">Verify</a></div>
                     </div>
                     <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 0;">
-                        <div><p style="color:#fff;font-weight:600;margin:0 0 .2rem;">Software Engineering & Operations</p><p style="color:#666;font-size:.8rem;margin:0;">Xgrid &middot; Bootcamp 2026</p></div>
-                        <div style="text-align:right;"><p style="color:#666;font-size:.8rem;margin:0 0 .2rem;">Jul 2026</p></div>
+                        <div><p style="color:var(--text-main);font-weight:600;margin:0 0 .2rem;">Software Engineering & Operations</p><p style="color:var(--text-muted);font-size:.8rem;margin:0;">Xgrid &middot; Bootcamp 2026</p></div>
+                        <div style="text-align:right;"><p style="color:var(--text-muted);font-size:.8rem;margin:0 0 .2rem;">Jul 2026</p></div>
                     </div>
                 </div>
             </section>
@@ -1303,6 +1353,40 @@
         <!-- Interactive portfolio controls -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
+                // 0. Hero typewriter + staggered reveal
+                const twEl = document.getElementById('hero-typewriter');
+                const heroLeft = document.querySelector('.hero-left');
+                const heroRight = document.querySelector('.hero-right');
+                const twText = "Muhammad Hussnain Saeed\niOS Developer — Rawalpindi, PK";
+                const twSpeed = 28;
+                const twStartDelay = 500;
+
+                if (twEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    let i = 0;
+                    setTimeout(() => {
+                        const cursor = document.createElement('span');
+                        cursor.className = 'typewriter-cursor';
+                        const typeNext = () => {
+                            i++;
+                            twEl.innerHTML = twText.slice(0, i).replace(/\n/g, '<br>');
+                            twEl.appendChild(cursor);
+                            if (i < twText.length) {
+                                setTimeout(typeNext, twSpeed);
+                            } else {
+                                setTimeout(() => cursor.remove(), 1200);
+                            }
+                        };
+                        typeNext();
+                    }, twStartDelay);
+                } else if (twEl) {
+                    twEl.innerHTML = twText.replace(/\n/g, '<br>');
+                }
+
+                setTimeout(() => {
+                    heroLeft && heroLeft.classList.add('is-visible');
+                    heroRight && heroRight.classList.add('is-visible');
+                }, 400);
+
                 // 1. Theme Toggle Logic
                 const themeBtn = document.getElementById('toggle-theme-btn');
                 themeBtn.addEventListener('click', () => {
